@@ -109,7 +109,7 @@ function draw_plot(data) {
         })
         .on("mouseleave", function(event, d) {
             // Back to normal opacity: 1
-            d3.selectAll('.rect-group').transition().duration(450).style("opacity", 1)
+            d3.selectAll('.rect-group').transition().duration(400).style("opacity", 1)
         })
         .selectAll("rect")
         // enter a second time = loop subgroup per subgroup to add all rectangles
@@ -193,7 +193,7 @@ function moveStacks(keys, moveDown) {
       single_rect = d3.select(data_case_attr+key_attr);
       current_rect_y = single_rect.attr('y');
       new_rect_y = parseFloat(current_rect_y) + datacase_sum_height[i];
-      single_rect.transition().duration(800).attr('y', new_rect_y);
+      single_rect.transition().duration(500).attr('y', new_rect_y);
     }
   }
 
